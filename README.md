@@ -1,7 +1,7 @@
 JRuby Sinatra app (deployable to Heroku) for JVnSegmenter
 =======
 
-[JVnSegmenter](http://jvnsegmenter.sourceforge.net/) is a Java-based Vietnamese Word Segmentation Tool. Special thanks to [@djellemah](https://github.com/djellemah) for teaching me some JRuby and doing all the hard work to make this work. This Sinatra/Heroku skeleton was stolen from [here](https://github.com/rpocklin/jruby-sinatra-heroku-skeleton). 
+[JVnSegmenter](http://jvnsegmenter.sourceforge.net/) is a Java-based Vietnamese Word Segmentation Tool. Special thanks to [@djellemah](https://github.com/djellemah) for teaching me some JRuby and doing all the hard work to make this work. This Sinatra/Heroku skeleton was stolen from [here](https://github.com/rpocklin/jruby-sinatra-heroku-skeleton).  
 
 ```ruby
 # "Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín ."
