@@ -1,2 +1,2 @@
-require 'example'
+require 'start_up'
 run Sinatra::Application
