@@ -4,9 +4,12 @@
 require 'jvn_segmenter'
 require 'json'
 
+def segmenter
+  @@segmenter ||= JvnSegmenter.new
+end
+
 post "/?" do
   return unless params[:key] == ENV['KEY']
-  segmenter = JvnSegmenter.new
   text = params[:text]
   segmented_text = segmenter.segment text
   array = segmented_text.scan(/\[([^\]]*)\]/)
