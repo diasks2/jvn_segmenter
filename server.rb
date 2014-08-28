@@ -9,6 +9,7 @@ def segmenter
 end
 
 post "/?" do
+  return unless params[:key] == ENV['KEY']
   text = params[:text]
   segmented_text = segmenter.segment text
   array = segmented_text.scan(/\[([^\]]*)\]/)
