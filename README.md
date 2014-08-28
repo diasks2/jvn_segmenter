@@ -9,15 +9,32 @@ curl -d 'text=N%C3%B3%20l%C3%A0%20m%E1%BB%99t%20b%E1%BA%A3n%20tuy%C3%AAn%20ng%C3
 # => {"0":["Nó"],"1":["là"],"2":["một"],"3":["bản"],"4":["tuyên ngôn"],"5":["đặc sắc"],"6":["của"],"7":["chủ nghĩa"],"8":["nhân đạo"],"9":["một"],"10":["tiếng"],"11":["chuông"],"12":["cảnh tỉnh"],"13":["trước"],"14":["hiểm họa"],"15":["lớn lao"],"16":["của"],"17":["hành tinh"],"18":["trước"],"19":["sự điên rồ"],"20":["của"],"21":["những"],"22":["kẻ"],"23":["cuồng tín"]}
 ```
 
+Instructions
+-----------
+
+**Check this code out from github.**  
+`$ git clone git://github.com/diasks2/jvn_segmenter.git`  
+
+**Go into the project directory and run:**  
+`$ jruby -S gem install bundler heroku`  
+
+**Generate your Gemfile.lock and load dependencies:**  
+`$ jruby -S bundle install`  
+
+**Duplicate the Gemfile to Jemfile so that heroku knows its a JRuby app.**  
+`$ cp Gemfile Jemfile`  
+`$ cp Gemfile.lock Jemfile.lock`  
+
+**Initialise GIT**  
+`$ git init`  
+`$ git add .`  
+`$ git commit -m "Initial commit"`  
+
+**Initialise and push to Heroku (with cedar stack for java) this will give you the application URL (can be renamed by logging in to heroku.com)**  
+`$ heroku create --stack cedar --buildpack http://github.com/heroku/heroku-buildpack-java.git`  
+`$ git push heroku master`  
+
 Other useful commands
 -----------
 
 Start local server: `$ rackup`  
-
-**To Update the Gem File:**  
-Generate your Gemfile.lock and load dependencies  
-`$ jruby -S bundle install`  
-
-Duplicate the Gemfile to Jemfile so that heroku knows its a JRuby app.  
-`$ cp Gemfile Jemfile`  
-`$ cp Gemfile.lock Jemfile.lock`  
