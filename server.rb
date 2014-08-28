@@ -9,9 +9,8 @@ def segmenter
 end
 
 post "/?" do
-  return unless params[:key] == ENV['KEY']
+  return 403 unless params[:key] == ENV['KEY']
   text = params[:text]
   segmented_text = segmenter.segment text
-  array = segmented_text.scan(/\[([^\]]*)\]/)
-  Hash[(0...array.size).zip array].to_json
+  segmented_text.scan(/\[([^\]]*)\]/).flatten.to_json
 end
