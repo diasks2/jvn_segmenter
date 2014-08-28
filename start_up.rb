@@ -4,4 +4,3 @@ require 'sinatra'
 
 # actual source files
 require 'server'
-require 'jvn_segmenter'
