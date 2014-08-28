@@ -3,7 +3,9 @@
 # Sinatra route mapping
 #
 
-get '/' do
-  JvnSegmenter.new("Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín ."
-=> "Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín .").segment
+## POST curl http://still-taiga-9764.herokuapp.com/?text="Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín ."
+post "/?" do
+  new_params = accept_params(params :text)
+  segmented_sentence = JvnSegmenter.new(new_params).segment
+  segmented_sentence
 end
