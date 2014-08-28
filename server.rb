@@ -5,6 +5,7 @@ require 'jvn_segmenter'
 require 'json'
 
 post "/?" do
+  return unless params[:key] == ENV['KEY']
   segmenter = JvnSegmenter.new
   text = params[:text]
   segmented_text = segmenter.segment text
