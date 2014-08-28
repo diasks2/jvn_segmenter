@@ -2,7 +2,9 @@
 #
 # Sinatra route mapping
 #
+require 'jvn_segmenter'
 
+## curl -d 'text=Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín .' http://still-taiga-9764.herokuapp.com --data-urlencode
 ## POST curl http://still-taiga-9764.herokuapp.com/?text="Nó là một bản tuyên ngôn đặc sắc của chủ nghĩa nhân đạo , một tiếng chuông cảnh tỉnh trước hiểm họa lớn lao của hành tinh trước sự điên rồ của những kẻ cuồng tín ."
 post "/?" do
   new_params = accept_params(params :text)
