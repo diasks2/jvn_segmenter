@@ -7,5 +7,5 @@
 post "/?" do
   new_params = accept_params(params :text)
   segmented_sentence = JvnSegmenter.new(new_params).segment
-  segmented_sentence
+  "Here is your sentence: #{segmented_sentence}"
 end
