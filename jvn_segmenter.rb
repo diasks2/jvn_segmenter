@@ -1,11 +1,11 @@
-require Pathname(__FILE__).parent + '../JVnSegmenter.jar'
+require 'JVnSegmenter.jar'
 
 class JvnSegmenter
   java_import 'JVnSegmenter.JVnSegmenter'
   java_import 'JVnSegmenter.TaggingInputData'
 
   def model_dir
-    @model_dir ||= (Pathname(__FILE__).parent + '../models').to_s
+    @model_dir ||= 'models'.to_s
   end
 
   # one way to memoise
