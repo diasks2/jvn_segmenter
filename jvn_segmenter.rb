@@ -16,7 +16,7 @@ class JvnSegmenter
   end
 
   def tagger_data
-    @tagger_data ||= Java::JVnSegmenter::TaggingInputData.new.tap |tg|
+    @tagger_data ||= Java::JVnSegmenter::TaggingInputData.new.tap do |tg|
       raise "Can't read tagger data" unless tg.init(model_dir)
     end
   end
